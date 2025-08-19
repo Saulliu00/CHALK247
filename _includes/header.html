@@ -1,0 +1,66 @@
+     {{ site.title }}
+      
+      
+      
+      
+        
+          
+            
+          
+        
+      
+
+      
+        {% for item in site.data.navigation.main %}
+          {{ item.title }}
+        {% endfor %}
+      
+    
+  
+
+```
+
+### 9. _includes/footer.html
+```html
+
+  
+    
+      {{ site.title }}
+      {{ site.description }}
+    
+    
+    
+      Connect
+      
+        {% if site.instagram_username %}
+          
+            Instagram
+          
+        {% endif %}
+        {% if site.twitter_username %}
+          
+            Twitter
+          
+        {% endif %}
+        {% if site.github_username %}
+          
+            GitHub
+          
+        {% endif %}
+      
+    
+    
+    
+      Quick Links
+      
+        About
+        Routes
+        Events
+        Blog
+      
+    
+  
+  
+  
+    &copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved. | Built by climbers, for climbers 🧗
+    Remember: Leave no trace, respect the rock, climb responsibly.

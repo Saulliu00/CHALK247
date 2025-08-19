@@ -1,0 +1,54 @@
+# Site settings
+title: Chalk 24/7
+email: hello@chalk247.studio
+description: >- 
+  Live. Breathe. Climb. Chalk 24/7 is a rock climbing community 
+  for those who breathe with rock climbing and live with rock climbing.
+baseurl: "" 
+url: "https://chalk247.studio"
+twitter_username: chalk247
+github_username:  chalk247
+instagram_username: chalk247
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  routes:
+    output: true
+    permalink: /routes/:path/
+  events:
+    output: true
+    permalink: /events/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Chalk 24/7 Team"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

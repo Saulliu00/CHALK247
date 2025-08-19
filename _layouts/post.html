@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+  
+    {{ page.title | escape }}
+    
+      
+        {{ page.date | date: "%B %d, %Y" }}
+      
+      {% if page.author %}
+        • 
+            {{ page.author }}
+          
+      {% endif %}
+      {% if page.categories %}
+        • 
+            {% for category in page.categories %}
+              {{ category }}
+              {% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          
+      {% endif %}
+    
+  
+
+  
+    {{ content }}
+  
+
+  
+    {% if page.tags %}
+      
+        Tags:
+        {% for tag in page.tags %}
+          {{ tag }}
+        {% endfor %}
+      
+    {% endif %}
+    
+    
+      {% if page.previous %}
+        
+          ← {{ page.previous.title }}
+        
+      {% endif %}
+      {% if page.next %}
+        
+          {{ page.next.title }} →
+        
+      {% endif %}
