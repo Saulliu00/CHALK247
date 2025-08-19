@@ -1,10 +1,13 @@
+<!-- _layouts/page.html -->
 ---
 layout: default
 ---
+<article class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
 
-  
-    {{ page.title | escape }}
-  
-
-  
+  <div class="page-content">
     {{ content }}
+  </div>
+</article>
