@@ -76,7 +76,7 @@ chalk247/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/chalk247.git
+   git clone https://github.com/SaulchangLiu/chalk247.git
    cd chalk247
    ```
 

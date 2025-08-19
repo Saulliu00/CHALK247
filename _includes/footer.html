@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>{{ site.title }}</h3>
+      <p>{{ site.description }}</p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Connect</h3>
+      <div class="social-links">
+        {% if site.instagram_username %}
+          <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        {% endif %}
+        {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">
+            Twitter
+          </a>
+        {% endif %}
+        {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/routes' | relative_url }}">Routes</a></li>
+        <li><a href="{{ '/events' | relative_url }}">Events</a></li>
+        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved. | Built by climbers, for climbers 🧗</p>
+    <p>Remember: Leave no trace, respect the rock, climb responsibly.</p>
+  </div>
+</footer>
