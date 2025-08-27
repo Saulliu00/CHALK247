@@ -1,4 +1,3 @@
-# events.md
 ---
 layout: page
 title: Events
@@ -24,5 +23,3 @@ Join us for community climbing sessions, competitions, and workshops.
 ### Host an Event
 
 Want to organize a climbing event? We'd love to support you! Contact us at [hello@chalk247.studio](mailto:hello@chalk247.studio)
-
----

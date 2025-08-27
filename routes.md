@@ -1,4 +1,3 @@
-# routes.md
 ---
 layout: page
 title: Climbing Routes

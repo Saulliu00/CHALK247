@@ -1,4 +1,3 @@
-# blog.md
 ---
 layout: page
 title: Blog

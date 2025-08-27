@@ -27,7 +27,7 @@ kramdown:
 collections:
   routes:
     output: true
-    permalink: /routes/:path/
+    permalink: /routes/:name/
   events:
     output: true
     permalink: /events/:path/
