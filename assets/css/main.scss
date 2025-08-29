@@ -1,3 +1,7 @@
+---
+# Front matter for Jekyll processing - THIS IS REQUIRED!
+---
+
 @import "variables";
 @import "base";
 @import "layout";
@@ -37,13 +41,14 @@ body {
   }
   
   .logo-hero {
-    width: 200px;
-    height: 200px;
+    width: 120px;  // Reduced from 200px for better proportion
+    height: 120px; // Reduced from 200px for better proportion
     margin: 0 auto 2rem;
     border-radius: 50%;
     background: var(--chalk-white);
-    padding: 20px;
+    padding: 15px;
     display: block;
+    object-fit: contain;
   }
   
   h1 {
@@ -259,6 +264,11 @@ body {
   .hero h1 {
     font-size: 2.5rem;
   }
+  
+  .hero .logo-hero {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 // Animations
@@ -423,50 +433,113 @@ body {
 .main-content {
   padding-top: 60px;
   min-height: calc(100vh - 60px);
+  background: var(--rock-black);
 }
 
-// Page layout
-.page {
+// Page layout for non-home pages
+.page-wrapper {
+  background: var(--rock-black);
+  min-height: calc(100vh - 60px);
+}
+
+.page-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+              var(--rock-black);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-hero-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  
-  .page-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    
-    .page-title {
-      font-size: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--chalk-white);
-    }
-  }
-  
-  .page-content {
-    h2 {
-      color: var(--rope-orange);
-      margin: 2rem 0 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    h3 {
-      color: var(--chalk-white);
-      margin: 1.5rem 0 1rem;
-    }
-    
-    a {
-      color: var(--rope-orange);
-      text-decoration: none;
-      transition: opacity 0.3s ease;
-      
-      &:hover {
-        opacity: 0.8;
-        text-decoration: underline;
-      }
-    }
-  }
+  animation: fadeInUp 0.8s ease;
+}
+
+.page-hero .page-title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--chalk-white);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-main {
+  padding: 3rem 2rem;
+  background: var(--rock-black);
+}
+
+.page-main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-content {
+  animation: fadeInUp 1s ease;
+}
+
+.page-content h2 {
+  color: var(--rope-orange);
+  margin: 2.5rem 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.page-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--rope-orange);
+}
+
+.page-content h3 {
+  color: var(--chalk-white);
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.page-content p {
+  color: var(--chalk-white);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.page-content ul,
+.page-content ol {
+  color: var(--chalk-white);
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.page-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+.page-content a {
+  color: var(--rope-orange);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.page-content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.page-content strong {
+  color: var(--rope-orange);
+  font-weight: bold;
 }
 
 // Post page styling
@@ -553,5 +626,28 @@ body {
         }
       }
     }
+  }
+}
+
+// Responsive adjustments for pages
+@media screen and (max-width: 768px) {
+  .page-hero {
+    padding: 3rem 1rem;
+  }
+  
+  .page-hero .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .page-main {
+    padding: 2rem 1rem;
+  }
+  
+  .page-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .page-content h3 {
+    font-size: 1.25rem;
   }
 }
